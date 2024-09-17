@@ -12,7 +12,7 @@ def Open_or_close(text, mod):
     pass
 def Write_text(text):
     message = text[text.find('пиши') + 5:].capitalize()
-    return
+    keyboard.write(message)
 
 def Julia_brain(text):
     if text.find('юля') != -1 or text.find('julia'):
