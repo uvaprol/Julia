@@ -1,7 +1,7 @@
 from AppOpener import open, close
 import speech_recognition as sr
-import mouse
 import keyboard
+import mouse
 
 def Open_or_close(text, mod):
     text = text.split(' ')
@@ -23,7 +23,8 @@ def Julia_brain(text):
 
         elif text.find('пиши') != -1:
             Write_text(text)
-
+        elif text.find('stop') != -1 or text.find('стоп') != -1:
+            exit()
 def main():
     r = sr.Recognizer()
     with sr.Microphone() as source:
@@ -36,5 +37,6 @@ def main():
     Julia_brain(text)
 
 if __name__ == 'main':
-    main()
+    while True:
+        main()
 
